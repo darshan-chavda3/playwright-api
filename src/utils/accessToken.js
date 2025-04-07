@@ -8,7 +8,7 @@ export class AccessToken {
                 'Content-Type': 'application/json',
             },
             data: {
-                username: userName,
+                userName: userName,
                 password: password,
             },
         });
