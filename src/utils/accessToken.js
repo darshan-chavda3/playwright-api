@@ -15,7 +15,7 @@ export class AccessToken {
 
         await expect(response.status()).toBe(200);
         const responseBody = await response.json();
-        const access_token = responseBody.token;
+        const access_token = 'Bearer ' + responseBody.token;
         return access_token;
     }
 }

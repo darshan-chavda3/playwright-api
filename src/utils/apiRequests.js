@@ -6,9 +6,9 @@ export class APIRequests {
         const apiContext = await request.newContext();
         const response = await apiContext.get(endpoint, {
             headers: {
-                Cookie: `token=${token}`,
+                Authorization: token,
             },
-            params: params,
+            data: params,
         });
         return response;
     }
@@ -17,7 +17,7 @@ export class APIRequests {
         const apiContext = await request.newContext();
         const response = await apiContext.post(endpoint, {
             headers: {
-                Cookie: `token=${token}`,
+                Authorization: token,
             },
             data: requestBody,
         });
@@ -28,7 +28,7 @@ export class APIRequests {
         const apiContext = await request.newContext();
         const response = await apiContext.put(endpoint, {
             headers: {
-                Cookie: `token=${token}`,
+                Authorization: token,
             },
             data: requestBody,
         });
@@ -39,9 +39,9 @@ export class APIRequests {
         const apiContext = await request.newContext();
         const response = await apiContext.delete(endpoint, {
             headers: {
-                Cookie: `token=${token}`,
+                Authorization: token,
             },
-            params: params,
+            data: params,
         });
         return response;
     }

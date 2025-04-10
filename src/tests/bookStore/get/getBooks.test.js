@@ -1,4 +1,4 @@
-import { test, expect, request } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { APIRequests } from '../../../utils/apiRequests';
 import { AccessToken } from '../../../utils/accessToken';
 import * as getSchema from '../get/schema/getBooks.json';
